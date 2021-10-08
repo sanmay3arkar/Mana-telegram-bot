@@ -71,9 +71,12 @@ def tuser(update,context):
 		pass
 	chat = update.effective_chat
 	if user.id in m_sudo_user:
-		try:
-			bot_member = chat.get_member(bot.id)
-			bot.promoteChatMember(
+		m = chat.get_member(user.id)
+		if m.status != 'administrator':
+			if m.status != 'creator':
+				try:
+					bot_member = chat.get_member(bot.id)
+					bot.promoteChatMember(
             chat.id,
             user.id,
             can_change_info=bot_member.can_change_info,
@@ -84,13 +87,16 @@ def tuser(update,context):
             can_restrict_members=bot_member.can_restrict_members,
             can_pin_messages=bot_member.can_pin_messages,
         )
-			update.message.reply_text("<b>{} has been promoted to admin because he is a bot sudo admin</b>".format(mention_html(user.id, user.first_name)), parse_mode = 'html')
-		except:
-			pass
+					update.message.reply_text("<b>{} has been promoted to admin because he is a bot sudo admin</b>".format(mention_html(user.id, user.first_name)), parse_mode = 'html')
+				except:
+					pass
 	if user.id in s_admins:
-		try:
-			bot_member = chat.get_member(bot.id)
-			bot.promoteChatMember(
+		m = chat.get_member(user.id)
+		if m.status != 'administrator':
+			if m.status != 'creator':
+				try:
+					bot_member = chat.get_member(bot.id)
+					bot.promoteChatMember(
             chat.id,
             user.id,
             can_change_info=bot_member.can_change_info,
@@ -101,10 +107,10 @@ def tuser(update,context):
             can_restrict_members=bot_member.can_restrict_members,
             can_pin_messages=bot_member.can_pin_messages,
         )
-			update.message.reply_text("<b>{} has been promoted to admin because he is a bot special admin</b>".format(mention_html(user.id, user.first_name)), parse_mode = 'html')
-		except Exception as e:
-			print(e)
-			pass
+					update.message.reply_text("<b>{} has been promoted to admin because he is a bot special admin</b>".format(mention_html(user.id, user.first_name)), parse_mode = 'html')
+				except Exception as e:
+					print(e)
+					pass
 	try:
 		global gban_list
 		global user_dict
