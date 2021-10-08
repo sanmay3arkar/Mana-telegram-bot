@@ -419,8 +419,8 @@ def a(update,context):
 
 updates.dispatcher.add_handler(CommandHandler("google", search.gogle, run_async = True))
 updates.dispatcher.add_handler(CommandHandler("weather", search.wethe, run_async = True))
-updates.dispatcher.add_handler(CommandHandler("sng", YouTube.song, run_async = True))
-updates.dispatcher.add_handler(CommandHandler("video", YouTube.video, run_async = True))
+updates.dispatcher.add_handler(CommandHandler("song", YouTube.song, run_async = True))
+updates.dispatcher.add_handler(CommandHandler("video", YouTube.videos, run_async = True))
 updates.dispatcher.add_handler(CommandHandler("wiki", Wikipedia.wik, run_async = True))
 updates.dispatcher.add_handler(CommandHandler("warn", warning.warn, run_async = True))
 updates.dispatcher.add_handler(CommandHandler("report", warning.report, run_async = True))
