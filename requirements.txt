@@ -1,0 +1,17 @@
+python-telegram-bot
+requests
+anilistpy
+aiohttp
+python-arq
+pyrogram
+firebase-admin
+CurrencyConverter
+bs4
+google
+geopy
+pillow
+telegraph
+deep-translator
+wikipedia
+youtube-search-python
+youtube-dl
