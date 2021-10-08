@@ -120,7 +120,7 @@ def adchat(update,context):
 	user = update.effective_user
 	
 	if chat_id.type != 'private':
-		promoter = chat.get_member(user.id)
+		promoter = chat_id.get_member(user.id)
 
 		if (
 			not (promoter.status == 'administrator' or promoter.status == "creator")
@@ -142,7 +142,7 @@ def rchat(update, context):
 	user = update.effective_user
 	
 	if chat_id1.type != 'private':
-		promoter = chat.get_member(user.id)
+		promoter = chat_id.get_member(user.id)
 
 		if (
 			not (promoter.status == 'administrator' or promoter.status == "creator")
