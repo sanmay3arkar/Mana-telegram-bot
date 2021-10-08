@@ -1,7 +1,7 @@
 python-telegram-bot
 requests
 setuptools
-anilistpy
+anilistpy == 0.0.5.2
 aiohttp
 python-arq
 pyrogram
