@@ -11,9 +11,9 @@ bot = Bot("1929797199:AAFLk4hTedHqMiL7sddYhFqWJtqtJKTeiBA")
 
 updates = Updater("1929797199:AAFLk4hTedHqMiL7sddYhFqWJtqtJKTeiBA", use_context = True)
 
-API_ID = int(os.environ.get("API_ID", "4272186"))
-API_HASH = os.environ.get("API_HASH", "fcacc350c16bd139b6c4313f0ca64e7d")
-BOT_TOKEN = os.environ.get("1929797199:AAFLk4hTedHqMiL7sddYhFqWJtqtJKTeiBA", None)
+#API_ID = int(os.environ.get("API_ID", "4272186"))
+#API_HASH = os.environ.get("API_HASH", "fcacc350c16bd139b6c4313f0ca64e7d")
+#BOT_TOKEN = os.environ.get("1929797199:AAFLk4hTedHqMiL7sddYhFqWJtqtJKTeiBA", None)
 ARQ_API_KEY = "XQYJAL-HTSZIK-YALWDS-TJPWMO-ARQ" 
 LANGUAGE = "en"
 ARQ_API_BASE_URL = "https://thearq.tech"
@@ -21,12 +21,12 @@ ARQ_API_BASE_URL = "https://thearq.tech"
 m_chat = []
 
 bot = Client(":memory:",
-             api_id=API_ID,
-             api_hash=API_HASH,
-             bot_token=BOT_TOKEN)
+             api_id=4272186,
+             api_hash="fcacc350c16bd139b6c4313f0ca64e7d",
+             bot_token="1929797199:AAFLk4hTedHqMiL7sddYhFqWJtqtJKTeiBA")
 
-bot_token= BOT_TOKEN
-bot_id = int(1759027838)
+bot_token= "1929797199:AAFLk4hTedHqMiL7sddYhFqWJtqtJKTeiBA"
+bot_id = int(1929797199)
 arq = None
 
 async def lunaQuery(query: str, user_id: int):
