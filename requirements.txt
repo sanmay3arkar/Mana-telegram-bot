@@ -1,5 +1,6 @@
 python-telegram-bot
 requests
+setuptools
 anilistpy
 aiohttp
 python-arq
