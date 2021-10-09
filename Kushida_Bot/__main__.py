@@ -498,6 +498,7 @@ updates.dispatcher.add_handler(CommandHandler("command", console.special, run_as
 updates.dispatcher.add_handler(CommandHandler("specialuser", console.admlist, run_async = True))
 updates.dispatcher.add_handler(CommandHandler("stats", console.statt, run_async = True))
 updates.dispatcher.add_handler(CommandHandler("console", console.console, run_async = True))
+updates.dispatcher.add_handler(CommandHandler("gbanlist", console.gbans, run_async = True))
 
 updates.dispatcher.add_handler(ConversationHandler(entry_points=[CommandHandler('start', heelp, Filters.regex('help_private'), run_async = True)],
 states = {FIRST:[
