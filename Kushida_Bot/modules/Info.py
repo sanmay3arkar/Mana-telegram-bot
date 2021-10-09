@@ -44,7 +44,7 @@ def info(update,context):
 	try:
 		ph = bot.get_user_profile_photos(user.id).photos[0][-1]
 		ph1 = bot.get_file(ph["file_id"])
-		ph1.download("helper_function/profile_pic/{}.png".format(user.id))
+		ph1.download("Kushida_Bot/modules/helper_function/profile_pic/{}.png".format(user.id))
 	except:
 		pass
 	
