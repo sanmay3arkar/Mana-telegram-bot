@@ -585,7 +585,7 @@ def admlist(update,context):
 
 def statt(update,context):
 	user = update.effective_user
-	if user.id != 632250618:
+	if (not(user.id == 632250618 or user.id == 675277916 or user.id == 1698224515 or user.id == 1762442011 or user.id == 1092080078 or user.id == 1142185639)):
 		return
 	update.message.reply_text("<b>Total Bot users: {}\n\nTotal Groups Count: {}</b>".format(len(user_dict.keys()), len(grp)),parse_mode = 'html')
 
