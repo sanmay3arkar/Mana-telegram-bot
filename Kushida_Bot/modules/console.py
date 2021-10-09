@@ -43,7 +43,7 @@ def afk(update,context):
 
 def tuser(update,context):
 	chat = update.effective_chat
-	user = update.message.from_user
+	user = update.effective_user
 	if user.id in afk_dict.keys():
 		update.message.reply_text(r.choice(l_file.BACK_AFK).format(user['first_name']))
 		afk_dict.pop(user.id)
