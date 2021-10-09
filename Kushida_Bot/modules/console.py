@@ -595,3 +595,19 @@ def console(update,context):
 		return
 	update.message.reply_text("*Console Command for creator*\n\n`~/upblk`* : To upload blacklist To Server*\n\n`~/upchbot` *: To upload chatbot list to server*\n\n`~/upbio` *: to upload bio to the server*\n\n`~/upsnote` *: To upload notes to the server*\n\n`~/uprules` *: To upload Rules detail to the server*\n\n`~/upwel`* : To upload welcome detail to the server*\n\n`~/stats `*: to view bot stats*", parse_mode = ParseMode.MARKDOWN)
 		
+def gbans(update,context):
+	user = update.effective_user
+	args = update.message.text.split(None, 1)
+	if user.id not in s_admins:
+		if user.id not in m_sudo_user:
+			update.message.reply_text("<b>You are not authorised to view it.</b>", parse_mode = 'html')
+			return
+	
+	try:
+		for i in gban_list:
+			txt = '♦️GBan List\n\n'
+			if str(i) in user_dict.keys():
+				txt += "🔹{}\n\n".format(mention_html(i, user_dict[str(i)]["first_name"]))
+		update.message.reply_text("<b>{}</b>".format(txt), parse_mode = 'html')
+	except:
+		update.message.reply_text("<b>I am really sorry server is currently busy please try again later</b>", parse_mode = 'html')
