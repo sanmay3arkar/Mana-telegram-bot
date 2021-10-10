@@ -19,6 +19,7 @@ firebase_admin.initialize_app(cred, {
 })
 
 rref = db.reference('Rules')
+rle = {}
 rle = rref.get()
 wref = db.reference('WELMes')
 wmes = wref.get()
