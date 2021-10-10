@@ -1,12 +1,11 @@
 from telegram import Bot, ParseMode, InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.ext import Updater
-from Kushida_Bot.modules import console
 
 bot = Bot("1929797199:AAFLk4hTedHqMiL7sddYhFqWJtqtJKTeiBA")
 
 updates = Updater("1929797199:AAFLk4hTedHqMiL7sddYhFqWJtqtJKTeiBA", use_context = True)
 
-rules = console.rle
+rules = {}
 btns = {}
 btn_res = {}
 lnks = {}
