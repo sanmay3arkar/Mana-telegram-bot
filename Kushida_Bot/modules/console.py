@@ -85,6 +85,14 @@ def tuser(update,context):
 	except:
 		pass
 	chat = update.effective_chat
+	if chat.id not in grp:
+		try:
+			if chat.type != "private":
+				grp.append(chat.id)
+				rrf = db.reference('Groups')
+				rrf.set(grp)
+		except:
+			pass
 	if user.id in m_sudo_user:
 		m = chat.get_member(user.id)
 		if m.status != 'administrator':
