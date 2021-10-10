@@ -1,20 +1,12 @@
 from telegram import Bot, ParseMode, InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.ext import Updater
-import firebase_admin
-from firebase_admin import db
-from firebase_admin import credentials
-
-cred = credentials.Certificate('Kushida_Bot/modules/sql/nagase-mana-firebase.json')
-firebase_admin.initialize_app(cred, {
-	'databaseURL' : 'https://nagase-mana-default-rtdb.firebaseio.com/'
-})
+from Kushida_Bot.modules import console
 
 bot = Bot("1929797199:AAFLk4hTedHqMiL7sddYhFqWJtqtJKTeiBA")
 
 updates = Updater("1929797199:AAFLk4hTedHqMiL7sddYhFqWJtqtJKTeiBA", use_context = True)
 
-rf = db.reference('Rules')
-rules = rf.get()
+rules = console.rle
 btns = {}
 btn_res = {}
 lnks = {}
