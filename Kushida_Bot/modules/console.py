@@ -18,6 +18,21 @@ firebase_admin.initialize_app(cred, {
 	'databaseURL' : 'https://nagase-mana-default-rtdb.firebaseio.com/'
 })
 
+rref = db.reference('Rules')
+rle = rref.get()
+wref = db.reference('WELMes')
+wmes = wref.get()
+bref = db.refernece('BlackList')
+blist = bref.get()
+cref = db.reference('Chatbot_list')
+cht = cref.get()
+wblref = db.reference('WELBLnks')
+wbln = wblref.get()
+wblsref = db.reference('WELBStat')
+wbls = wblsref.get()
+wbtnref = db.reference('WELBtns')
+wbtn = wbtnref.get()
+
 ref = db.reference('User')
 user_dict = ref.get()
 gbanref = db.reference('GBan')
