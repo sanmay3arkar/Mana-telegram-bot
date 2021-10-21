@@ -2,12 +2,13 @@ from telegram import Bot, InlineKeyboardMarkup, InlineKeyboardButton, ParseMode
 from telegram.ext import Updater
 import time
 import os
+from Kushida_Bot.modules import console
 
 bot = Bot("1929797199:AAFLk4hTedHqMiL7sddYhFqWJtqtJKTeiBA")
 
 updates = Updater("1929797199:AAFLk4hTedHqMiL7sddYhFqWJtqtJKTeiBA", use_context = True)
 
-notes = {}
+notes = console.nts
 
 def upnote(update,context):
 	args = update.message.text.split(None, 1)
