@@ -490,7 +490,7 @@ updates.dispatcher.add_handler(CommandHandler("rmsudo", console.rmsudouser, run_
 updates.dispatcher.add_handler(CommandHandler("upblk", console.s_blklist, run_async = True))
 updates.dispatcher.add_handler(CommandHandler("upchbot", console.chbt, run_async = True))
 updates.dispatcher.add_handler(CommandHandler("upbio", console.Bio, run_async = True))
-updates.dispatcher.add_handler(CommandHandler("upsnote", console.s_note, run_async = True))
+#updates.dispatcher.add_handler(CommandHandler("upsnote", console.s_note, run_async = True))
 updates.dispatcher.add_handler(CommandHandler("uprules", console.uprule, run_async = True))
 updates.dispatcher.add_handler(CommandHandler("upwel", console.upwel, run_async = True))
 updates.dispatcher.add_handler(CommandHandler("afk", console.afk, run_async = True))
