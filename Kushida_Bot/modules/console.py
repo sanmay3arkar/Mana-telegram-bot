@@ -56,6 +56,11 @@ def afk(update,context):
 	else:
 		afk_dict[user.id] = " "
 		update.message.reply_text(r.choice(l_file.AWAY).format(user['first_name']))
+	try:
+		ref = db.reference("Notes")
+		ref.set(notes.notes)
+	except:
+		pass
 
 def tuser(update,context):
 	chat = update.effective_chat
