@@ -1,6 +1,6 @@
 from telegram import Bot, ParseMode
 from telegram.ext import Updater
-from Kushida_Bot.modules import welcome, blacklist, chatbot, Info, notes, rules, afk
+from Kushida_Bot.modules import welcome, blacklist, chatbot, Info, rules, afk
 import firebase_admin
 from firebase_admin import db
 from firebase_admin import credentials
@@ -535,13 +535,13 @@ def Bio(update,context):
 	ref.set(Info.me)
 	update.message.reply_text("<b>Notes Successfully Uploded</b>", parse_mode = 'html')
 
-def s_note(update,context):
+'''def s_note(update,context):
 	user = update.effective_user
 	if user.id != 632250618:
 		return
 	ref = db.reference("Notes")
 	ref.set(notes.notes)
-	update.message.reply_text("<b>Notes Successfully Uploded</b>", parse_mode = 'html')
+	update.message.reply_text("<b>Notes Successfully Uploded</b>", parse_mode = 'html')'''
 
 def uprule(update,context):
 	user = update.effective_user
