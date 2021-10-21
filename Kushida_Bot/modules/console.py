@@ -19,7 +19,6 @@ firebase_admin.initialize_app(cred, {
 })
 
 rref = db.reference('Rules')
-rle = {}
 rle = rref.get()
 wref = db.reference('WELMes')
 wmes = wref.get()
@@ -33,6 +32,8 @@ wblsref = db.reference('WELBStat')
 wbls = wblsref.get()
 wbtnref = db.reference('WELBtns')
 wbtn = wbtnref.get()
+ntref = db.reference("Notes")
+nts = ntref.get()
 
 ref = db.reference('User')
 user_dict = ref.get()
@@ -56,11 +57,6 @@ def afk(update,context):
 	else:
 		afk_dict[user.id] = " "
 		update.message.reply_text(r.choice(l_file.AWAY).format(user['first_name']))
-	try:
-		ref = db.reference("Notes")
-		ref.set(notes.notes)
-	except:
-		pass
 
 def tuser(update,context):
 	chat = update.effective_chat
